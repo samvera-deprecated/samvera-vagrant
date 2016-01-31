@@ -8,10 +8,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	
 	config.vm.hostname = "curation-concerns"
 
-	config.vm.box = "fcrepo/fcrepo4-base"
+	config.vm.box = "ubuntu/trusty64"
 
 	config.vm.network :forwarded_port, guest: 3000, host: 3000 # Rails
-	config.vm.network :forwarded_port, guest: 8080, host: 8080 # Tomcat
+	config.vm.network :forwarded_port, guest: 8983, host: 8983 # Jetty
 
   config.vm.provider "virtualbox" do |v|
   	v.memory = 2048
@@ -19,8 +19,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   shared_dir = "/vagrant"
 
-  config.vm.provision "shell", path: "./install_scripts/fedora4.sh", args: shared_dir
-  #config.vm.provision "shell", path: "./install_scripts/ruby.sh", args: shared_dir
-  #config.vm.provision "shell", path: "./install_scripts/curation-concerns.sh", args: shared_dir
+  config.vm.provision "shell", path: "./install_scripts/bootstrap.sh", args: shared_dir
+  config.vm.provision "shell", path: "./install_scripts/java.sh", args: shared_dir
+  config.vm.provision "shell", path: "./install_scripts/ruby.sh", args: shared_dir
+  config.vm.provision "shell", path: "./install_scripts/curation-concerns.sh", args: shared_dir
 
 end

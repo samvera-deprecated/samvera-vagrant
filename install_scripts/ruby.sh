@@ -3,9 +3,8 @@
 echo "Setting up ruby environment"
 
 # pre-requisites
-PACKAGES="imagemagick libreadline-dev libyaml-dev libsqlite3-dev libqtwebkit-dev nodejs zlib1g-dev libsqlite3-dev nodejs"
+PACKAGES="imagemagick libreadline-dev libyaml-dev libsqlite3-dev libqtwebkit-dev nodejs zlib1g-dev libsqlite3-dev nodejs redis-server"
 sudo apt-get -y install $PACKAGES
-# redis-server ?
 
 # ruby (custom repository for a current ruby without having to compile it)
 sudo apt-add-repository -y ppa:brightbox/ruby-ng

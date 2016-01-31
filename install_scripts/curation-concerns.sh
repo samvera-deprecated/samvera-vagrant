@@ -11,20 +11,13 @@ yes Y | rails generate curation_concerns:install
 rake db:migrate
 rails generate curation_concerns:work Book
 
-# fix config
-sed -i 's|8983/fedora|8080/fcrepo|' config/fedora.yml
-sed -i 's|8983|8080|' config/solr.yml
-sed -i 's|8983|8080|' config/blacklight.yml
+# setup hydra-jetty
+bundle exec rake jetty:clean
+bundle exec rake jetty:config
+bundle exec rake jetty:start
 
-TOMCAT=/var/lib/tomcat7
-sudo mv $TOMCAT/solr/collection1 $TOMCAT/solr/development-core
-sudo cp -a $TOMCAT/solr/development-core $TOMCAT/solr/test-core
-sudo sed -i 's|collection1|development|' $TOMCAT/solr/development-core/core.properties
-sudo sed -i 's|collection1|test|' $TOMCAT/solr/test-core/core.properties
-sudo cp solr_conf/conf/* $TOMCAT/solr/development-core/
-sudo cp solr_conf/conf/* $TOMCAT/solr/test-core/
-sudo touch $TOMCAT/webapps/solr.war
-# XXX solr errors because of icu fields, need ICU jars
+# start redis
+sudo /etc/init.d/redis-server start
 
 # run the webserver
 unicorn -D -p 3000
