@@ -11,3 +11,5 @@ DOWNLOAD_DIR="$SHARED_DIR/downloads"
 if [ ! -d $DOWNLOAD_DIR ]; then
   mkdir $DOWNLOAD_DIR
 fi
+
+FITS_VERSION=0.10.0

@@ -22,6 +22,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision "shell", path: "./install_scripts/bootstrap.sh", args: shared_dir
   config.vm.provision "shell", path: "./install_scripts/java.sh", args: shared_dir
   config.vm.provision "shell", path: "./install_scripts/ruby.sh", args: shared_dir
+  config.vm.provision "shell", path: "./install_scripts/fits.sh", args: shared_dir
   config.vm.provision "shell", path: "./install_scripts/curation-concerns.sh", args: shared_dir
 
 end
