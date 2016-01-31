@@ -1,7 +1,5 @@
 # curation-concerns-vagrant
 
-**Status**: Solr config is broken
-
 ## Requirements
 
 * [Vagrant](https://www.vagrantup.com/)
