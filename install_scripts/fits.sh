@@ -11,5 +11,6 @@ cd $DOWNLOAD_DIR
 sudo curl $DOWNLOAD_URL > fits.zip
 unzip fits.zip
 chmod a+x fits-$FITS_VERSION/*.sh
-sudo cp -r fits-$FITS_VERSION/* /usr/local/bin
-sudo ln -s /usr/local/bin/fits.sh /usr/local/bin/fits
+sudo mv fits-$FITS_VERSION /usr/local
+sudo ln -s /usr/local/fits-$FITS_VERSION/fits.sh /usr/local/bin/fits.sh
+sudo ln -s /usr/local/fits-$FITS_VERSION/fits-env.sh /usr/local/bin/fits-env.sh

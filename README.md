@@ -25,9 +25,9 @@ You can shell into the machine with `vagrant ssh` or `ssh -p 2222 vagrant@localh
 
 * Ubuntu 14.04 64-bit base machine
 * A stock [Curation Concerns](https://github.com/projecthydra-labs/curation_concerns) app: [http://localhost:3000](http://localhost:3000)
-* [Tomcat 7](http://tomcat.apache.org):  [http://localhost:8080](http://localhost:8080) (manager username = "fedora4", password = "fedora4")
-* [Fedora 4.x](http://fedora.info/about): [http://localhost:8080/fcrepo](http://localhost:8080/fcrepo)
-* [Solr 4.10.3](http://lucene.apache.org/solr/): [http://localhost:8080/solr](http://localhost:8080/solr)
+  * Not running by default, start with `cd curation-concerns-demo; rails s -b 0.0.0.0`
+* [Solr 5.4.1](http://lucene.apache.org/solr/): [http://localhost:8983/solr/](http://localhost:8983/solr/)
+* [Fedora 4.5.0](http://fedorarepository.org/): [http://localhost:8984/](http://localhost:8984/)
 
 ## Thanks
 
