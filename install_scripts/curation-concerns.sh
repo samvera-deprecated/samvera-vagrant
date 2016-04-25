@@ -14,16 +14,8 @@ rails generate curation_concerns:work Book
 # start redis
 sudo /etc/init.d/redis-server start
 
-# start rails, fedora and solr for development
-nohup fcrepo_wrapper -p 8984 > log/fedora.log 2>&1 &
-nohup solr_wrapper --version 5.4.1 -d solr/config/ -p 8983 -n hydra-development > log/solr.log 2>&1 &
-
-printf 'waiting for solr and fedora'
-until $(curl --output /dev/null --silent --head --fail http://localhost:8983/solr); do
-    printf '.'
-    sleep 1
-done
-until $(curl --output /dev/null --silent --head --fail http://localhost:8984/rest); do
-    printf '.'
-    sleep 1
-done
+# start fedora and solr
+SHARED_DIR=$1
+sudo cp $SHARED_DIR/install_scripts/fedora-solr /etc/init.d/
+sudo update-rc.d fedora-solr start 90 2 3 4 5 .
+sudo /etc/init.d/fedora-solr start
