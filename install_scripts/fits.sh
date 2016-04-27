@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # FITS
+SHARED_DIR=$1
 
 if [ -f "$SHARED_DIR/install_scripts/config" ]; then
   . $SHARED_DIR/install_scripts/config
@@ -11,6 +12,5 @@ cd $DOWNLOAD_DIR
 sudo curl $DOWNLOAD_URL > fits.zip
 unzip fits.zip
 chmod a+x fits-$FITS_VERSION/*.sh
-sudo mv fits-$FITS_VERSION /usr/local
-sudo ln -s /usr/local/fits-$FITS_VERSION/fits.sh /usr/local/bin/fits.sh
-sudo ln -s /usr/local/fits-$FITS_VERSION/fits-env.sh /usr/local/bin/fits-env.sh
+cd fits-$FITS_VERSION/
+sudo mv *.properties *.sh lib tools xml /usr/local/bin
