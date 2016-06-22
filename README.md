@@ -7,7 +7,7 @@
 
 ## Setup
 
-1. `git clone https://github.com/escowles/curation-concerns-vagrant.git`
+1. `git clone https://github.com/projecthydra-labs/curation-concerns-vagrant.git`
 2. `cd curation-concerns-vagrant`
 3. `vagrant up`
 
@@ -15,7 +15,7 @@ You can shell into the machine with `vagrant ssh` or `ssh -p 2222 vagrant@localh
 
 ## Using Curation Concerns
 
-* A stock [Curation Concerns](https://github.com/projecthydra-labs/curation_concerns) app is built in the Vagrant in `/home/vagrant/curation-concerns-demo`
+* A stock [CurationConcerns](https://github.com/projecthydra-labs/curation_concerns) app is built in the Vagrant in `/home/vagrant/curation-concerns-demo`
   * Once connected to the Vagrant VM, start with: `cd curation-concerns-demo; rails s -b 0.0.0.0`
 * Access the app at [http://localhost:3000](http://localhost:3000).
 * To setup an initial user account:
@@ -26,7 +26,7 @@ You can shell into the machine with `vagrant ssh` or `ssh -p 2222 vagrant@localh
 ## Environment
 
 * Ubuntu 14.04 64-bit base machine
-* A stock [Curation Concerns](https://github.com/projecthydra-labs/curation_concerns) app which can be run at: [http://localhost:3000](http://localhost:3000)
+* [CurationConcerns](https://github.com/projecthydra-labs/curation_concerns): [http://localhost:3000](http://localhost:3000)
 * [Solr 5.4.1](http://lucene.apache.org/solr/): [http://localhost:8983/solr/](http://localhost:8983/solr/)
 * [Fedora 4.5.0](http://fedorarepository.org/): [http://localhost:8984/](http://localhost:8984/)
 
