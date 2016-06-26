@@ -2,6 +2,8 @@
 #
 # Contain Environment variables for installs
 #
+APP=sufia
+#APP=curation-concerns
 
 HOME_DIR="/home/vagrant"
 
