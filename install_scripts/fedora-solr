@@ -4,7 +4,7 @@ case "$1" in
   start)
     echo "Starting Fedora and Solr"
     su - vagrant -c "/bin/sh -c 'cd /home/vagrant/curation-concerns-demo; nohup fcrepo_wrapper -p 8984 -i tmp > log/fedora.log 2>&1 &'"
-    su - vagrant -c "/bin/sh -c 'cd /home/vagrant/curation-concerns-demo; nohup solr_wrapper --version 5.4.1 -d solr/config/ -p 8983 -n hydra-development -i tmp/solr > log/solr.log 2>&1 &'"
+    su - vagrant -c "/bin/sh -c 'cd /home/vagrant/curation-concerns-demo; nohup solr_wrapper -d solr/config/ -p 8983 -n hydra-development -i tmp/solr > log/solr.log 2>&1 &'"
     printf 'waiting for solr and fedora'
     until $(curl --output /dev/null --silent --head --fail http://localhost:8983/solr); do
       printf '.'
