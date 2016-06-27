@@ -1,4 +1,6 @@
-# curation-concerns-vagrant
+# hydra-vagrant
+
+A Vagrant environment to quickly setup current [CurationConcerns](https://github.com/projecthydra/curation_concerns) or [Sufia](https://github.com/projecthydra/sufia) applications.
 
 ## Requirements
 
@@ -7,16 +9,19 @@
 
 ## Setup
 
-1. `git clone https://github.com/projecthydra-labs/curation-concerns-vagrant.git`
-2. `cd curation-concerns-vagrant`
+1. `git clone https://github.com/projecthydra-labs/hydra-vagrant.git`
+2. `cd hydra-vagrant`
 3. `vagrant up`
 
 You can shell into the machine with `vagrant ssh` or `ssh -p 2222 vagrant@localhost`
 
-## Using Curation Concerns
+## Using the App
 
-* A stock [CurationConcerns](https://github.com/projecthydra-labs/curation_concerns) app is built in the Vagrant in `/home/vagrant/curation-concerns-demo`
-  * Once connected to the Vagrant VM, start with: `cd curation-concerns-demo; rails s -b 0.0.0.0`
+* The Vagrant contains two demo apps:
+  * CurationConcerns: `/home/vagrant/curation-concerns-demo`
+  * Sufia: `/home/vagrant/sufia-demo`
+* Once connected to the Vagrant VM, change into the app directory and run the demo.
+  e.g., for CurationConcerns: `cd curation-concerns-demo; rake demo`
 * Access the app at [http://localhost:3000](http://localhost:3000).
 * To setup an initial user account:
   * Click "Log In" in the upper right, and then "Sign up" in the login form.
@@ -26,9 +31,9 @@ You can shell into the machine with `vagrant ssh` or `ssh -p 2222 vagrant@localh
 ## Environment
 
 * Ubuntu 14.04 64-bit base machine
-* [CurationConcerns](https://github.com/projecthydra-labs/curation_concerns): [http://localhost:3000](http://localhost:3000)
-* [Solr 5.4.1](http://lucene.apache.org/solr/): [http://localhost:8983/solr/](http://localhost:8983/solr/)
-* [Fedora 4.5.0](http://fedorarepository.org/): [http://localhost:8984/](http://localhost:8984/)
+* [CurationConcerns](https://github.com/projecthydra/curation_concerns) or [Sufia](https://github.com/projecthydra/sufia): [http://localhost:3000](http://localhost:3000)
+* [Solr 6.1.0](http://lucene.apache.org/solr/): [http://localhost:8983/solr/](http://localhost:8983/solr/)
+* [Fedora 4.5.1](http://fedorarepository.org/): [http://localhost:8984/](http://localhost:8984/)
 
 ## Thanks
 
