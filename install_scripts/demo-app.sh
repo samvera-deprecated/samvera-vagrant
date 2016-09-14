@@ -19,7 +19,7 @@ echo "Creating CurationConcerns demo in /home/vagrant/curation-concerns-demo"
 cd
 rails new curation-concerns-demo --skip-spring
 cd curation-concerns-demo
-echo "gem 'curation_concerns', github:'projecthydra-labs/curation_concerns', branch: 'master'" >> Gemfile
+echo "gem 'curation_concerns', '1.5.0'" >> Gemfile
 bundle install --quiet
 rails generate curation_concerns:install -f -q
 rails generate curation_concerns:work Book -q

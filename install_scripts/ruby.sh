@@ -9,7 +9,7 @@ sudo apt-get -y install $PACKAGES
 # ruby (custom repository for a current ruby without having to compile it)
 sudo apt-add-repository -y ppa:brightbox/ruby-ng
 sudo apt-get update
-sudo apt-get -y install ruby2.2 ruby2.2-dev
+sudo apt-get -y install ruby2.3 ruby2.3-dev
 
 # gems
 GEMS="bundler rails unicorn"
