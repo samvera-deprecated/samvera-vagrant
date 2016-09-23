@@ -30,10 +30,11 @@ echo "Creating Sufia demo in /home/vagrant/sufia-demo"
 cd
 rails new sufia-demo --skip-spring
 cd sufia-demo
-echo "gem 'sufia', '7.0.0.beta4'" >> Gemfile
+echo "gem 'sufia', github: 'projecthydra/sufia', branch: :master" >> Gemfile
+echo "gem 'flipflop', github: 'jcoyne/flipflop', branch: :hydra" >> Gemfile
 echo "gem 'unicorn-rails'" >> Gemfile
 bundle install --quiet
 rails generate sufia:install -f -q
-#rails generate sufia:work Work -q # TODO: uncomment this when next release > beta4 is out
+rails generate sufia:work Work -q
 rake db:migrate
 echo "$DEMO_TASK" >> Rakefile
