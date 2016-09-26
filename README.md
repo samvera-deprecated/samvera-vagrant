@@ -4,7 +4,7 @@ A Vagrant environment to quickly setup current [CurationConcerns](https://github
 
 ## Requirements
 
-* [Vagrant](https://www.vagrantup.com/)
+* [Vagrant](https://www.vagrantup.com/) version 1.8.5+
 * [VirtualBox](https://www.virtualbox.org/)
 
 ## Setup

@@ -3,8 +3,6 @@
 # Contain Environment variables for installs
 #
 
-HOME_DIR="/home/vagrant"
-
 SHARED_DIR="/vagrant"
 
 DOWNLOAD_DIR="$SHARED_DIR/downloads"

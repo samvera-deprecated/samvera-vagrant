@@ -15,7 +15,7 @@ task :demo do
   end
 end"
 
-echo "Creating CurationConcerns demo in /home/vagrant/curation-concerns-demo"
+echo "Creating CurationConcerns demo in ${HOME}/curation-concerns-demo"
 cd
 rails new curation-concerns-demo --skip-spring
 cd curation-concerns-demo
@@ -26,7 +26,7 @@ rails generate curation_concerns:work Book -q
 rake db:migrate
 echo "$DEMO_TASK" >> Rakefile
 
-echo "Creating Sufia demo in /home/vagrant/sufia-demo"
+echo "Creating Sufia demo in ${HOME}/sufia-demo"
 cd
 rails new sufia-demo --skip-spring
 cd sufia-demo
