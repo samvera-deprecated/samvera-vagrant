@@ -9,8 +9,11 @@ fi
 
 DOWNLOAD_URL="http://projects.iq.harvard.edu/files/fits/files/fits-${FITS_VERSION}.zip"
 cd $DOWNLOAD_DIR
-sudo curl $DOWNLOAD_URL > fits.zip
+if [ ! -f "fits.zip" ]; then
+  sudo curl $DOWNLOAD_URL > fits.zip
+fi
 unzip fits.zip
 chmod a+x fits-$FITS_VERSION/*.sh
 cd fits-$FITS_VERSION/
-sudo mv *.properties *.sh lib tools xml /usr/local/bin
+FITS_PATH="${DOWNLOAD_DIR}/fits-${FITS_VERSION}"
+echo "PATH=\${PATH}:$FITS_PATH" >> /home/vagrant/.bashrc
