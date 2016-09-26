@@ -32,8 +32,8 @@ You can shell into the machine with `vagrant ssh` or `ssh -p 2222 vagrant@localh
 
 * Ubuntu 14.04 64-bit base machine
 * [CurationConcerns](https://github.com/projecthydra/curation_concerns) or [Sufia](https://github.com/projecthydra/sufia): [http://localhost:3000](http://localhost:3000)
-* [Solr 6.1.0](http://lucene.apache.org/solr/): [http://localhost:8983/solr/](http://localhost:8983/solr/)
-* [Fedora 4.5.1](http://fedorarepository.org/): [http://localhost:8984/](http://localhost:8984/)
+* [Solr 6.2.0](http://lucene.apache.org/solr/): [http://localhost:8983/solr/](http://localhost:8983/solr/)
+* [Fedora 4.6.0](http://fedorarepository.org/): [http://localhost:8984/](http://localhost:8984/)
 
 ## Thanks
 

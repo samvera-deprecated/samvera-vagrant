@@ -19,7 +19,7 @@ echo "Creating CurationConcerns demo in /home/vagrant/curation-concerns-demo"
 cd
 rails new curation-concerns-demo --skip-spring
 cd curation-concerns-demo
-echo "gem 'curation_concerns', github:'projecthydra-labs/curation_concerns', branch: 'master'" >> Gemfile
+echo "gem 'curation_concerns', '1.5.0'" >> Gemfile
 bundle install --quiet
 rails generate curation_concerns:install -f -q
 rails generate curation_concerns:work Book -q
@@ -30,10 +30,11 @@ echo "Creating Sufia demo in /home/vagrant/sufia-demo"
 cd
 rails new sufia-demo --skip-spring
 cd sufia-demo
-echo "gem 'sufia', '7.0.0.beta4'" >> Gemfile
+echo "gem 'sufia', github: 'projecthydra/sufia', branch: :master" >> Gemfile
+echo "gem 'flipflop', github: 'jcoyne/flipflop', branch: :hydra" >> Gemfile
 echo "gem 'unicorn-rails'" >> Gemfile
 bundle install --quiet
 rails generate sufia:install -f -q
-#rails generate sufia:work Work -q # TODO: uncomment this when next release > beta4 is out
+rails generate sufia:work Work -q
 rake db:migrate
 echo "$DEMO_TASK" >> Rakefile
