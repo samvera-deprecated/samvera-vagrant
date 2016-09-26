@@ -12,5 +12,5 @@ sudo apt-get update
 sudo apt-get -y install ruby2.3 ruby2.3-dev
 
 # gems
-GEMS="bundler rails unicorn"
+GEMS="bundler rails"
 sudo gem install $GEMS --no-ri --no-rdoc
