@@ -15,7 +15,3 @@ else
   apt-get install --yes oracle-java8-installer
   apt-get install --yes oracle-java8-set-default
 fi
-
-# Maven
-apt-get -y install maven
-
