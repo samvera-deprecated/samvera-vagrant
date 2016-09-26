@@ -32,7 +32,6 @@ rails new sufia-demo --skip-spring
 cd sufia-demo
 echo "gem 'sufia', github: 'projecthydra/sufia', branch: :master" >> Gemfile
 echo "gem 'flipflop', github: 'jcoyne/flipflop', branch: :hydra" >> Gemfile
-echo "gem 'unicorn-rails'" >> Gemfile
 bundle install --quiet
 rails generate sufia:install -f -q
 rails generate sufia:work Work -q
