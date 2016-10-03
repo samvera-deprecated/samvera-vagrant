@@ -1,0 +1,8 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# For any shell scripts (.sh), ensure LF (Unix) line endings are ALWAYS kept
+# (even on Windows), as these are shell provisioning scripts
+*.sh text eol=lf
+# Same for the 'config' script
+install_scripts/config text eol=lf
