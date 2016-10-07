@@ -37,3 +37,12 @@ rails generate sufia:install -f -q
 rails generate sufia:work Work -q
 rake db:migrate
 echo "$DEMO_TASK" >> Rakefile
+
+echo "Creating Lerna (Hydra-in-a-box) demo in ${HOME}/lerna-demo"
+cd
+git clone https://github.com/projecthydra-labs/lerna.git lerna-demo
+cd lerna-demo
+bundle install --quiet
+rake db:create
+rake db:migrate
+echo "$DEMO_TASK" >> Rakefile
