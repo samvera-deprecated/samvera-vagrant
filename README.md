@@ -1,6 +1,6 @@
 # hydra-vagrant
 
-A Vagrant environment to quickly setup current [CurationConcerns](https://github.com/projecthydra/curation_concerns) or [Sufia](https://github.com/projecthydra/sufia) applications.
+A Vagrant environment to quickly setup current [CurationConcerns](https://github.com/projecthydra/curation_concerns), [Sufia](https://github.com/projecthydra/sufia) or [Lerna / Hydra-in-a-box](https://github.com/projecthydra-labs/lerna) applications.
 
 ## Requirements
 
@@ -17,9 +17,10 @@ You can shell into the machine with `vagrant ssh` or `ssh -p 2222 vagrant@localh
 
 ## Using the App
 
-* The Vagrant contains two demo apps:
+* The Vagrant contains three demo apps:
   * CurationConcerns: `/home/vagrant/curation-concerns-demo`
   * Sufia: `/home/vagrant/sufia-demo`
+  * Lerna / Hydra-in-a-box: `/home/vagrant/lerna-demo`
 * Once connected to the Vagrant VM, change into the app directory and run the demo.
   e.g., for CurationConcerns: `cd curation-concerns-demo; rake demo`
 * Access the app at [http://localhost:3000](http://localhost:3000).
@@ -30,8 +31,8 @@ You can shell into the machine with `vagrant ssh` or `ssh -p 2222 vagrant@localh
 
 ## Environment
 
-* Ubuntu 14.04 64-bit base machine
-* [CurationConcerns](https://github.com/projecthydra/curation_concerns) or [Sufia](https://github.com/projecthydra/sufia): [http://localhost:3000](http://localhost:3000)
+* Ubuntu 16.04 64-bit base machine
+* [CurationConcerns](https://github.com/projecthydra/curation_concerns), [Sufia](https://github.com/projecthydra/sufia) or [Lerna](https://github.com/projecthydra-labs/lerna): [http://localhost:3000](http://localhost:3000)
 * [Solr 6.2.0](http://lucene.apache.org/solr/): [http://localhost:8983/solr/](http://localhost:8983/solr/)
 * [Fedora 4.6.0](http://fedorarepository.org/): [http://localhost:8984/](http://localhost:8984/)
 
