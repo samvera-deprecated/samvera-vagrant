@@ -18,8 +18,8 @@ You can shell into the machine with `vagrant ssh` or `ssh -p 2222 vagrant@localh
 ## Using the App
 
 * The Vagrant contains two demo apps:
-  * CurationConcerns: `/home/vagrant/curation-concerns-demo`
-  * Sufia: `/home/vagrant/sufia-demo`
+  * CurationConcerns: `/home/ubuntu/curation-concerns-demo`
+  * Sufia: `/home/ubuntu/sufia-demo`
 * Once connected to the Vagrant VM, change into the app directory and run the demo.
   e.g., for CurationConcerns: `cd curation-concerns-demo; rake demo`
 * Access the app at [http://localhost:3000](http://localhost:3000).
