@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "Installing PostgreSQL database (requirement for Lerna)"
+echo "Installing PostgreSQL database (requirement for Hyku)"
 
 # Necessary PostgreSQL packages
 PACKAGES="postgresql-common postgresql libpq-dev"
