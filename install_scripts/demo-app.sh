@@ -15,33 +15,35 @@ task :demo do
   end
 end"
 
-echo "Creating CurationConcerns demo in ${HOME}/curation-concerns-demo"
+DEFAULT_ADMIN_SET_TASK="
+task :default_admin_set do
+  with_server :development do
+    Rake::Task['hyrax:default_admin_set:create'].invoke
+    exit
+  end
+end
+"
+
+echo "Creating Hyrax demo in ${HOME}/hyrax-demo"
 cd
-rails new curation-concerns-demo --skip-spring
-cd curation-concerns-demo
-echo "gem 'curation_concerns', '1.5.0'" >> Gemfile
+rails new hyrax-demo --skip-spring
+cd hyrax-demo
+echo "gem 'hyrax', github: 'samvera/hyrax'" >> Gemfile
 bundle install --quiet
-rails generate curation_concerns:install -f -q
-rails generate curation_concerns:work Book -q
-rake db:migrate
+rails generate hyrax:install -f -q
+rails db:migrate
+rails hyrax:workflow:load
+echo "$DEFAULT_ADMIN_SET_TASK" >> Rakefile
+rails default_admin_set
+rails generate hyrax:work Image -q
+rails generate hyrax:work Book -q
 echo "$DEMO_TASK" >> Rakefile
 
-echo "Creating Sufia demo in ${HOME}/sufia-demo"
+echo "Creating Hyku demo in ${HOME}/hyku-demo"
 cd
-rails new sufia-demo --skip-spring
-cd sufia-demo
-echo "gem 'sufia', github: 'projecthydra/sufia', branch: :master" >> Gemfile
-echo "gem 'flipflop', github: 'jcoyne/flipflop', branch: :hydra" >> Gemfile
-bundle install --quiet
-rails generate sufia:install -f -q
-rails generate sufia:work Work -q
-rake db:migrate
-echo "$DEMO_TASK" >> Rakefile
-
-echo "Creating Lerna (Hydra-in-a-box) demo in ${HOME}/lerna-demo"
-cd
-git clone https://github.com/projecthydra-labs/lerna.git lerna-demo
-cd lerna-demo
+git clone https://github.com/samvera-labs/hyku.git hyku-demo
+cd hyku-demo
+sed -i -e 's/enabled: false/enabled: true/' config/settings.yml
 bundle install --quiet
 rake db:create
 rake db:migrate
