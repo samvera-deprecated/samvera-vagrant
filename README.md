@@ -21,7 +21,7 @@ You can shell into the machine with `vagrant ssh` or `ssh -p 2222 vagrant@localh
   * Hyrax: `/home/ubuntu/hyrax-demo`
   * Hyku: `/home/ubuntu/hyku-demo`
 * Once connected to the Vagrant VM, change into the app directory and run the demo.
-  e.g., for Hyrax: `cd hyrax-demo; rake demo`
+  e.g., for Hyrax: `cd hyrax-demo; bundle exec rake demo`
 * Access the app at [http://localhost:3000](http://localhost:3000).
 * To setup an initial user account in Hyrax:
   * Click "Log In" in the upper right, and then "Sign up" in the login form.
