@@ -29,7 +29,7 @@ You can shell into the machine with `vagrant ssh` or `ssh -p 2222 vagrant@localh
   * Once signed in, you can create content by clicking the "Share Your Work" button on the homepage.
 * To setup an initial user account in Hyku:
    * Create a [superadmin user account](https://github.com/samvera-labs/hyku/wiki/Create-super-admin-user)
-   * Create a new account for a tenant and tenant user account, then go to your tenant account
+   * Create a new account for a [tenant](https://github.com/samvera-labs/hyku/wiki#multi-tenancy) and tenant user account, then go to your tenant account
    * Once signed in, you can create content by clicking the "Share Your Work" button on the homepage.
 * See the [Hyku documentation](https://wiki.duraspace.org/display/hyku/Hyku+Product+Beta+-+Frequently+Asked+Questions) for more on how to get started on Hyku
 
