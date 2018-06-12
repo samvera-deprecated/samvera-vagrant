@@ -29,7 +29,7 @@ cd
 rails new hyrax-demo --skip-spring
 cd hyrax-demo
 echo "gem 'hyrax', github: 'samvera/hyrax'" >> Gemfile
-bundle install --quiet
+bundle install --quiet --path vendor/bundle
 bundle exec rails generate hyrax:install -f -q
 bundle exec rails db:migrate
 bundle exec rails hyrax:workflow:load
@@ -44,7 +44,7 @@ cd
 git clone https://github.com/samvera-labs/hyku.git hyku-demo
 cd hyku-demo
 sed -i -e 's/enabled: false/enabled: true/' config/settings.yml
-bundle install --quiet
+bundle install --quiet --path vendor/bundle
 bundle exec rake db:create
 bundle exec rake db:migrate
 echo "$DEMO_TASK" >> Rakefile
