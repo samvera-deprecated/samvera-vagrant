@@ -6,6 +6,6 @@ echo "Installing PostgreSQL database (requirement for Hyku)"
 PACKAGES="postgresql-common postgresql libpq-dev"
 sudo apt-get -y install $PACKAGES
 
-# As our vagrant box defaults to a user named 'ubuntu',
-# we have to create a corresponding 'ubuntu' SUPERUSER in PostgreSQL
-sudo -u postgres createuser ubuntu --superuser
+# As our vagrant box defaults to a user named 'vagrant',
+# we have to create a corresponding 'vagrant' SUPERUSER in PostgreSQL
+sudo -u postgres createuser vagrant --superuser
