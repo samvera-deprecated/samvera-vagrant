@@ -22,5 +22,5 @@ apt-get -y install build-essential
 # Git vim
 apt-get -y install git vim
 
-# Wget, curl and unzip
-apt-get -y install wget curl unzip
+# Wget, curl, libcurl and unzip
+apt-get -y install wget curl libcurl3 unzip
