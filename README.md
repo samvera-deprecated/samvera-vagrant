@@ -1,6 +1,9 @@
+## Note: This project has been deprecated and is no longer being maintained.
+Please see [Hyrax](http://github.com/samvera/hyrax/) or [Hyku](https://github.com/samvera/hyku) for setup instructions.
+
 # samvera-vagrant
 
-A Vagrant environment to quickly setup current [Hyrax](http://hyr.ax/) or [Hyku](https://github.com/samvera-labs/hyku) applications.
+A Vagrant environment to quickly setup current [Hyrax](http://hyr.ax/) or [Hyku](https://github.com/samvera/hyku) applications.
 
 ## Requirements
 
@@ -28,15 +31,15 @@ You can shell into the machine with `vagrant ssh` or `ssh -p 2222 vagrant@localh
   * Enter your username and password, and click "Sign up" to create your account and sign in.
   * Once signed in, you can create content by clicking the "Share Your Work" button on the homepage.
 * To setup an initial user account in Hyku:
-   * Create a [superadmin user account](https://github.com/samvera-labs/hyku/wiki/Create-super-admin-user)
-   * Create a new account for a [tenant](https://github.com/samvera-labs/hyku/wiki#multi-tenancy) and tenant user account, then go to your tenant account
+   * Create a [superadmin user account](https://github.com/samvera/hyku/wiki/Create-super-admin-user)
+   * Create a new account for a [tenant](https://github.com/samvera/hyku/wiki#multi-tenancy) and tenant user account, then go to your tenant account
    * Once signed in, you can create content by clicking the "Share Your Work" button on the homepage.
 * See the [Hyku documentation](https://wiki.duraspace.org/display/hyku/Hyku+Product+Beta+-+Frequently+Asked+Questions) for more on how to get started on Hyku
 
 ## Environment
 
 * Ubuntu 16.04 64-bit base machine
-* [Hyrax](https://github.com/samvera-labs/hyrax) or [Hyku](https://github.com/samvera-labs/hyku): [http://localhost:3000](http://localhost:3000)
+* [Hyrax](https://github.com/samvera-labs/hyrax) or [Hyku](https://github.com/samvera/hyku): [http://localhost:3000](http://localhost:3000)
 * [Solr 6.6.0](http://lucene.apache.org/solr/): [http://localhost:8983/solr/](http://localhost:8983/solr/)
 * [Fedora 4.7.1](http://fedorarepository.org/): [http://localhost:8984/](http://localhost:8984/)
 
